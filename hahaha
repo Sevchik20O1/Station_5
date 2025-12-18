@@ -15,17 +15,13 @@ if(x<4){
 
 function c(e){
     e.preventDefault();
-    document.body.innerHTML='<div style="margin:0;padding:20px;height:100vh;background:white;display:flex;align-items:center;justify-content:center;font-size:48px;font-family:sans-serif;color:black;">о чём видео?</div>';
-    
-    setTimeout(()=>{
-        let clicks=parseInt(localStorage.kaminClicks||0)+1;
-        localStorage.kaminClicks=clicks;
-        if(clicks<4){
-            window.location.href='https://vimeo.com/1126541722?fl=pl&fe=sh';
-        }else{
-            document.body.innerHTML='<div style="margin:0;padding:20px;height:100vh;background:white;display:flex;align-items:center;justify-content:center;font-size:48px;font-family:sans-serif;color:black;">камин</div>';
-        }
-    }, 3000);
+    let clicks=parseInt(localStorage.kaminClicks||0)+1;
+    localStorage.kaminClicks=clicks;
+    if(clicks<4){
+        window.location.href='https://vimeo.com/1126541722?fl=pl&fe=sh';
+    }else{
+        document.body.innerHTML='<div style="margin:0;padding:20px;height:100vh;background:white;display:flex;align-items:center;justify-content:center;font-size:48px;font-family:sans-serif;color:black;">камин</div>';
+    }
 }
 </script>
 </body>
