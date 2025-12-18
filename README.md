@@ -7,8 +7,8 @@
 function c(e){
     e.preventDefault();
     
-    let clicks=parseInt(localStorage.btnClicks||0)+1;
-    localStorage.btnClicks=clicks;
+    let clicks=parseInt(sessionStorage.btnClicks||0)+1;
+    sessionStorage.btnClicks=clicks;
     
     let messages = [
         '', '', '', '', // 1-4 клика: "о чём видео?"
