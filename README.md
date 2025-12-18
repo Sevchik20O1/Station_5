@@ -3,16 +3,7 @@
 <body style="margin:0;height:100vh;background:black;">
 <iframe src="https://player.vimeo.com/video/1126541722?autoplay=1&muted=1&loop=1" style="width:100%;height:100%;border:none;" allowfullscreen></iframe>
 <script>
-let x = parseInt(localStorage.getItem('kaminClicks') || '0');
-
-// Сбрасываем счётчик для новой сессии (когда переходят по ссылке)
-if(document.referrer && !document.referrer.includes('sevchik20o1.github.io')) {
-    localStorage.setItem('kaminClicks', '0');
-    x = 1;
-} else {
-    x++;
-}
-
+let x = parseInt(localStorage.getItem('kaminClicks') || '0') + 1;
 localStorage.setItem('kaminClicks', x);
 
 if(x >= 4) {
@@ -20,7 +11,7 @@ if(x >= 4) {
 } else {
     setTimeout(() => {
         window.location.href = 'https://vimeo.com/1126541722?fl=pl&fe=sh';
-    }, 2000); // 2 секунды видео
+    }, 3000);
 }
 </script>
 </body>
